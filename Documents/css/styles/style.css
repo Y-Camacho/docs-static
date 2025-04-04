@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+main {
+    width: 60%;
+    margin: 0 auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contain-code{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+}
+
+.code {
+    background-color: rgb(40, 41, 43);
+    border: 2px solid grey;
+    border-radius: 5px;
+    min-height: 40px;
+
+    color: white;
+    flex-grow: 1;
+
+}
+
+.back-menu {
+    background-color: rgb(24, 131, 134);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.back-menu:hover {
+    background-color: rgb(15, 83, 85);
+}
+
+/* .coment {
+    color:rgb(0, 126, 21);
+    margin: 0;
+    font-weight: bold;
+}
+
+.coment::before {
+    content: " ";
+}
+
+.coment::after {
+    content: "";
+} */
+
+/* 
+    Todas las clases siguientes que comeinzan por .hljs son de la librería Highlight.js
+    Aquí modifico un poco los estilos por defecto para ciertos selectores.
+*/
+
+.hljs-comment {
+    color:rgb(0, 114, 28);
+    font-weight: bold;
+}

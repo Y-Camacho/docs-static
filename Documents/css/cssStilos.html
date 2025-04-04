@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/CSS-Logo.png" type="image/x-icon" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Estilos</title>
+</head>
+<body>
+    <main>
+        <h1>Estilos</h1>
+    
+        <p>
+            Los estilos nos permiten cambiar la apariencia de los distintos elementos de 
+            un documento HTML. Para hacer uso de ellos hay que modificar las propiedades
+            de los elementos, y esto se puede hacer de distintas formas. 
+        </p>
+
+        <h2>Estilos en línea</h2>
+        <p>
+            Se aplican directamente a un elemento con la propiedad <i>style</i>.
+        </p>
+        <div class="contain-code">
+            <div class="code">
+<pre><code class="html">&lt;!--Estilos en linea -->
+&lt;h1 style="background-color: red;">Introducción al css&lt;/h1>
+</code></pre>
+            </div>
+        </div>
+
+        <h2>Estilos internos</h2>
+        <p>
+            Se aplican usando la etiqueta <i>style</i> en el <i>head</i>.
+        </p>
+        <div class="contain-code">
+            <div class="code">
+<pre><code>&lt;head>
+    &lt;style>
+        body {
+            color: red;
+        }
+    &lt;/style>
+&lt;/head>
+</code></pre>
+            </div>
+        </div>
+
+        <h2>Estilos externos</h2>
+        <p>
+            Se desarrollan en un documento CSS aparte y se enlaza con el HTML a través
+            de la etiqueta <i>link</i>.
+        </p>
+        <div class="contain-code">
+            <div class="code">
+<pre><code class="css">/* Codigo CSS */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: red;
+}
+</code></pre>
+            </div>
+            <div class="code">
+<pre><code class="html">&lt;!-- Codigo HTML */ -->
+&lt;head>
+    &lt;link rel="stylesheet" href="style.css">
+&lt;/head>
+</code></pre>
+            </div>
+        </div>
+        <br><br>
+        <a href="cascadingStyleSheet.html" class="back-menu">Volver al menu ☝️</a>
+        <br>
+    </main>
+    <script src="js/scrip.js"></script>
+</body>
+</html>

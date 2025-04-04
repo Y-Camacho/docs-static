@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/CSS-Logo.png" type="image/x-icon" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>El posicionamiento</title>
+</head>
+<body>
+    <main>
+
+        <h1>El posicionamiento</h1>
+        
+        <p>
+            Las propiedades FLOAT y POSITION nos permiten modificar la posición natural de cualquier elemento del documento HTML.
+            El navegador posiciona cada elemento teniendo en cuenta el orden en que que aparece al documento (de izquierda a 
+            derecha y de arriba a abajo) y el tipo de visualización dependiendo si es un elemento en línea o en bloque.
+            Con FLOAT y POSITION podemos modificar este comportamiento
+        </p>
+
+        <h2>Tipos de posicionamiento</h2>
+
+        <ul>
+            <li>static (default)</li>
+            <li>relative</li>
+            <li>absolute</li>
+            <li>fixed</li>
+            <li>sticky</li>
+        </ul>
+
+        <p>
+            <b>Para mover y posicionar los elementos</b> (con relative, absolute, fixed o sticky) 
+            utilizaremos las propiedades: 
+        </p>
+        <ul>
+            <li>top (vertical, eje y)</li>
+            <li>bottom (vertical, eje y)</li>
+            <li>left (horizontal, eje x)</li>
+            <li>right (horizontal, eje x)</li>
+            <li>z-index (profundidad, eje z)</li>
+        </ul>
+
+        <p>
+            Estas 5 propiedades <b>NO funcionan</b> con el valor por defecto static! Porque static
+            significa respetar el flujo original del posicionamiento de los elementos.
+        </p>
+        <p>
+            Las propiedades <b>top y left</b> tiene prioridad respecto a botton y right respectivamente.
+            En caso de conflicto entre aplicar top o botton, se aplicará top. Lo mismo pasa con left y right.
+        </p>
+
+        <h3>Posicionamento static</h3>
+        <p>
+            En este posicionamiento no se aplican left, right, top, booton ni z-index
+        </p>
+
+        <h3>Posicionamento reletive</h3>
+        <p>
+            En este posicionamiento el elemento <b>conserva las dimenciones y el posicionamento original</b> 
+            dentro del flujo de documento. Si se mueve toma como referencia su posición original.
+        </p>
+
+        <h3>Posicionamento absolute</h3>
+        <p>
+            El elemente pieder sus dimenciones (width y heigth) y posición original al flujo del documento. 
+            Si es mueve pudede tomar como referencia dos elementos:
+        </p>
+        <ul>
+            <li>El primer ancestro con posicionamiento relativo.</li>
+            <li>Si no encuentra ningún ancentro relativo, se mueve respectoa al documento HTML.</li>
+        </ul>
+
+        <h3>Posicionamiento FIXED</h3>
+        <p>
+            Pierde las dimenciones y posición original del flujo del documento. Si se mueve toma como referencia el 
+            documento HTML y queda fija en la posición donde se ha movido. Cuando se haga un scroll el elemento no se 
+            moverá, se quedará fijo.
+        </p>
+
+        <h3>Posicionamiento Sticky o pegajoso</h3>
+        <p>
+            Es una combinación de posicionamiento relative y fixed. En este tipo de posicionamiento las propiedades 
+            top, left, bottom y right no mueven el elemento. En vez de desplazar sirven como punto de referencia mientras 
+            el elemento no llega a los valores establecidos. Mientras no llegue a las posiciones establecidas por las propiedades 
+            , el elemento se comporta relativamente y cuando llegua a estas posiciones queda fija.
+        </p>
+        <p>Hay dos opciones para implementarlo</p>
+        <ul>
+            <li>El elemento sticky tiene que se hijo directo del body</li>
+            <li>Su elemento contenedor debe tener dimenciones definidas y solamente será sticky dentro de este contenedor.</li>
+        </ul>
+
+
+        <br><br>
+        <a href="cascadingStyleSheet.html" class="back-menu">Volver al menu ☝️</a>
+        <br>
+    </main>
+    <script src="js/scrip.js"></script>
+</body>
+</html>

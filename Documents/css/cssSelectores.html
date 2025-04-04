@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/CSS-Logo.png" type="image/x-icon" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Selectores CSS</title>
+</head>
+<body>
+    <main>
+
+        <h1 id="selectores">Selectores</h1>
+
+        <nav class="menu"></nav>
+            <ul>
+                <li><a href="cssSelectores.html#selectores-basicos">Selectores básicos</a></li>
+                <li><a href="cssSelectores.html#selectores-avanzados">Selectores avanzados</a></li>
+                <li><a href="cssSelectores.html#selector-universal">Selector universal</a></li>
+                <li><a href="cssSelectores.html#agrupacion">Agrupación de selectores</a></li>
+            </ul>
+        </nav>
+
+        <p>
+            Los selectores se utilizan para delimitar los elementos HTML de una página 
+            web a los que se quieren aplicar estilo.Son patrones de elementos y otros 
+            términos que indican al navegador qué elementos HTML se seleccionan para 
+            aplicarles una regla que incluye los valores de las propiedades CSS.
+        </p>
+
+
+        <h2 id="selectores-basicos">Selectores básicos</h2>
+        <div class="contain-code">
+            <div class="code">
+<pre><code class="css">/* Selectores de etiqueta: cualquier etiqueta HTML */
+p {
+    color: orange;
+}
+
+/* Selectores identificadores (id, "#"). */
+#paragraf-dos {
+    color: black
+}
+
+/* Selectores de clase (class, ".") */
+.paragraf-dos {
+    color: green;
+}
+</code></pre>
+            </div>
+            <div class="code">
+<pre><code class="html">&lt;body>
+    &lt;p id="paragraf-dos" class="paragraf-dos">&lt;/p>
+&lt;/body>
+</code></pre>
+            </div>
+        </div>
+
+        <h2 id="selectores-avanzados">Selectores avanzados</h2>
+        <div class="contain-code">
+            <div class="code">
+<pre><code class="css">
+/* Hijos directos ( > ) */
+    .fills-directes > li{
+        background-color: chocolate;
+    }
+    
+/* Hijos descedientes ( " " ) */
+    .fills-descendents b {
+        background-color: lightgreen;
+    }
+    
+/* Hermanos generales ( ~ ) */
+    .germans-general ~ li {
+        background-color: blue;
+    }
+    
+/* Hermanos adyacentes ( + ) */
+    .german-adyacent + li {
+        background-color: blue;
+    }
+
+/* Selectores de atributo (selector[atributo]) */
+    .selectors-atributs a[href] {
+        background-color: yellow;
+    }
+    
+/* Selectores da tributo con valores concretos (selector[atributo=""]) */
+    .selectors-atributs a[target="_blank"] {
+        background-color: rgb(122, 62, 207);
+    }
+    
+/* Selector de atributo con un patrón (selector[atributo*=""]) */
+    .selectors-atributs a[href*="index"] {
+        font-size: 24px;
+    }
+    
+/* Selector de atributo que conmience con un patrón (selector[atributo^=""]) */
+    .selectors-atributs a[href^="#"] {
+        text-decoration: none;
+    }
+    
+/* Selector de atributo que acabe con un patrón (selector[atributo$=""]) */
+    .selectors-atributs a[href$="-css"] {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    
+/* Selector de atributo que encuentre un patrón en una lista de valores */ 
+    (selector[atributo~=""])
+    .selectors-atributs a[class~="cursos"] {
+        font-style: italic;
+    }
+    
+/* Selector de atributo que encuentre un patrón en una lista de valores */
+    y acontinuación del patrón haya un guiòn (-)
+    .selectors-atributs a[class|="menu"] {
+        color:red;
+    }
+</code></pre>
+            </div>
+        </div>
+
+        <h2 id="selector-universal">Selector universal</h2>
+        <p>
+            El selector universal se indica con un asterisco ( * ) y selecciona todos los 
+            elementos del documento (o del elemento padre si está encadenado con otro 
+            elemento y un operador de combinación descendente, por ejemplo).
+        </p>
+        <p>
+            Suele utilizarce para cambiar el <i>box model</i> de un documento o para
+            inicializar los valores por defecto que los navegadores asignan a los elementos HTML.
+        </p>
+        <div class="contain-code">
+            <div class="code">
+<pre><code class="css">
+/* Selector universal ( * ) */
+    * {
+        box-sizing: border-box;
+        margin: 5px;
+    }
+
+/* Selector universal contextual */
+    .selector-universal-contextual * {
+        font-size: 24px;
+    }
+</code></pre>
+            </div>
+        </div>
+
+        <h2 id="agrupacion">Agrupación de selectores</h2>
+
+        <p></p>
+            Sirven para cuando queremos aplicar los mismos estilos
+            con distintos selectores. utilizaremos la coma (,) para 
+            listar los selectores a los que queremos aplicar los 
+            mismo estilos.
+        </p>
+
+        <div class="contain-code">
+            <div class="code">
+<pre><code class="css">
+    h2, h2, .tittle {
+        color: red;
+    }
+
+</code></pre>
+            </div>
+        </div>
+
+        <br><br>
+        <a href="cascadingStyleSheet.html" class="back-menu">Volver al menu ☝️</a>
+        <br>
+    </main>
+    <script src="js/scrip.js"></script>
+</body>
+</html>

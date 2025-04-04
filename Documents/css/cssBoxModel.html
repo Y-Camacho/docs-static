@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/CSS-Logo.png" type="image/x-icon" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Box Model</title>
+    <style>
+        .overflow {
+            background-color: bisque;
+            width: 300px;
+            height: 100px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Box Model</h1>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="cssBoxModel.html#tipos">Tipos de cajas</a>
+                    <ul>
+                        <li><a href="cssBoxModel.html#caja-bloque">Cajas en bloque</a></li>
+                        <li><a href="cssBoxModel.html#caja-linea">Cajas en línea</a></li>
+                    </ul>
+                </li>
+                <li><a href="cssBoxModel.html#propiedades">Algunas propiedades de la cajas</a></li>
+                <li><a href="cssBoxModel.html#colapso">Colapso de márgenes</a></li>
+            </ul>
+        </nav>
+
+        <p>
+            El nombre 'box-model' (modelo de caja) se llama así porque, en los navegadores, todo se construye a partir de cajas.
+        </p>
+
+        <p> 
+            Entonces, lo primero que debemos de entender, es que cada elemento que definimos en un documento HTML se mostrará 
+            en el navegador como una caja rectangular esta es la forma en que se representan todos los elementos, no existen 
+            elementos triangulares, redondos, poligonales etc. Todos los elementos en HTML por defecto son rectangulares ya 
+            que internamente el navegador dibuja un rectángulo.
+        </p>
+
+        <h2 id="tipos">Tipos de cajas</h2>
+
+        <h3 id="caja-bloque">Cajas en bloque</h3>
+
+        <p>Se comportan de la siguiente forma.</p>
+
+        <ul>
+            <li>La caja ocupa toda la línea i fuerza un saldo de linea al final</li>
+            <li>La caja se extiende en la dirección de la lnea hasta el final. Generalmente significa que la caja tendrá la amplitud de su contenedor i ocupará el 100% del espacio disponible</li>
+            <li>El padding, el border y el margen (Este último mantiene alejada la caja de otros elementos) se aplican sin problemas.</li>
+        </ul>
+
+        <h3 id="caja-linea">Cajas en línea</h3>
+
+        <p>La cajas en línea se comportan de la siguiente forma:</p>
+
+        <ul>
+            <li>La caja solo ocupa el espacio que ocupa su contenido y no fuerza un salto de linea.</li>
+            <li>Las propiedades width y heigth <b>NO</b> se aplican.</li>
+            <li>El paddin, el border y el margen <b>vertical</b> se aplican pero, <b>NO</b> mantiene alejadas otras cajas en linea.</li>
+            <li>El padding, el border y el margen <b>horizontal</b> se aplican y mantiene alejadas las demás cajas en linea.</li>
+        </ul>
+
+        <h2 id="propiedades">Algunas propiedades de las Cajas</h2>
+
+        <h3>La propiedad display</h3>
+
+        <p>
+            Esta propiedad nos permite mostrar las cajas y qué comportamientos CSS se aplican para visualizar los 
+            elementos. Valores que puede tener:
+        </p>
+        <ul>
+            <li><b>none</b>: Se utiliza para motrar/ocultar los elementos html. No reserva el espacio que ocupará el elemento cuando está oculto, pero, cargará igualmente el contenido!</li>
+            <li><b>inline</b></li>
+            <li><b>block</b></li>
+            <li><b>inline-block</b>: Se comporta como un elemento inline, pero, que acepta aplicar <b>width</b> y <b>heigth</b></li>
+            <li><b>list-item</b></li>
+            <li><b>table</b></li>
+            <li><b>table-cell</b></li>
+            <li><b>table-row</b></li>
+            <li><b>flex</b></li>
+            <li><b>inline-flex</b></li>
+            <li><b>grid</b></li>
+            <li><b>inline-grid</b></li>
+        </ul>
+
+        <h3>La propiedad visibility</h3>
+        <p>
+            La propiedad visibility tiene 2 posibles valores:
+        </p>
+        <ul>
+            <li>idden</li>
+            <li>visible</li>
+        </ul>
+
+        <p>
+            No confundir con display=none. visibility hidden desaparece el contenido, pero queda el espacio
+            que este ocupaba.
+        </p>
+
+        <h3>La propiedad overflow (desbordamiento de contenido)</h3>
+        <p>Qué pasará con el contenido que desborda de su caja contenedora?</p>
+        <p>Decidiremos cómo actuar con un de los tres valores:</p>
+        <ul>
+            <li>visible</li>
+            <li>hidden</li>
+            <li>scroll</li>
+        </ul>
+
+        <div class="overflow">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, placeat quidem. Odio incidunt 
+            labore modi obcaecati exercitationem cum nobis rerum, molestiae excepturi, nemo, et tempora non quo 
+            iusto alias rem?
+        </div>
+
+        <h2 id="colapso">Colapso de márgenes</h2>
+
+        <p>
+            Ahora bien, cuando dos elementos de bloque HTML tienen márgenes verticales que se tocan entre sí, 
+            estos dos márgenes colapsan en uno o se fusionan entre sí, y aquí dominará el más grande. Esto 
+            puede suceder en los siguientes casos.
+        </p>
+
+        <h3>Caso 1 (hermanosd adyacentes)</h3>
+
+        <p>
+            Cuando los desarrolladores hace algo así, espera que el margen de la primera caja y la segunda sea ç
+            de 80px (40px + 40px), pero en realidad es de 40px. Los dos márgenes se tocan entre sí, por lo que 
+            se combinan o se colapsan el uno con el otro.
+        </p>
+
+        <p>
+            El margen inferior del elemento se colapsa con el margen superior del siguiente elemento.
+        </p>
+
+        <img src="assets/img/colapso.png" alt="colapso-margenes">
+
+        <h3>Caso 2 - Un contenedor padre y su primer elemento.</h3>
+
+        <p>
+            En elementos anidados dentro de otros, el primer elemento descendiente colapsa su margen superior con 
+            el margen superior del elemento padre. Las reglas son las mismas que antes. Por ejemplo, si los dos 
+            márgenes superiores son positivos, el margen superior resultante será el de mayor valor.
+        </p>
+
+        <h3>Caso 3 - Un contenedor padre y su último elemento.</h3>
+
+        <p>
+            De forma análoga a lo que ocurre en el caso anterior con los márgenes superiores, los márgenes inferiores 
+            del contenedor y de su último elemento también colapsan en uno solo. Y también como en el caso anterior, 
+            el colapso de márgenes no se produce si el borde o el padding del contenedor es mayor a cero.
+        </p>
+
+        <h3>Caso 4 - Bloques vacíos</h3>
+
+        <p>
+            Los márgenes verticales de un bloque vacío (sin height ni padding ni contenido) también colapsan entre sí. 
+            Por ejemplo, si tenemos un bloque vacío con un margen top de 40px y un margen bottom de 20px, el elemento 
+            ocupará una zona de 40px de altura al colapsar sus propios márgenes verticales:
+        </p>
+
+        <br><br>
+        <a href="cascadingStyleSheet.html" class="back-menu">Volver al menu ☝️</a>
+        <br>
+    </main>
+    <script src="js/scrip.js"></script>
+</body>
+</html>
