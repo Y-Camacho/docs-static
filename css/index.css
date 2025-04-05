@@ -1,0 +1,83 @@
+
+:root {
+    --teal-800: #0d9488;
+}
+
+
+
+html {
+    box-sizing: border-box;
+}
+  
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+    
+.bg-teal {
+    background-color: var(--teal-800);
+
+}
+.contain-code{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+}
+
+.code {
+    padding: 1rem;
+    background-color: rgb(40, 41, 43);
+    border: 2px solid grey;
+    border-radius: 5px;
+    min-height: 40px;
+
+    color: white;
+    flex-grow: 1;
+
+}
+
+.back-menu {
+    background-color: rgb(24, 131, 134);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.back-menu:hover {
+    background-color: rgb(15, 83, 85);
+}
+
+.overflow {
+    background-color: bisque;
+    width: 300px;
+    height: 100px;
+    overflow: auto;
+}
+
+/* .coment {
+    color:rgb(0, 126, 21);
+    margin: 0;
+    font-weight: bold;
+}
+
+.coment::before {
+    content: " ";
+}
+
+.coment::after {
+    content: "";
+} */
+
+/* 
+    Todas las clases siguientes que comeinzan por .hljs son de la librería Highlight.js
+    Aquí modifico un poco los estilos por defecto para ciertos selectores.
+*/
+
+.hljs-comment {
+    color:rgb(0, 114, 28);
+    font-weight: bold;
+}

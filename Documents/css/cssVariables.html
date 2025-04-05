@@ -1,60 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/img/CSS-Logo.png" type="image/x-icon" >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-    <link rel="stylesheet" href="styles/style.css">
-    <title>Variables CSS</title>
 </head>
 <body>
     <main>
-        <h1>Variables</h1>
+        <h1 class="text-center fw-bold mb-4 display-4" style="color: #8C271E;">Variables</h1>
 
-        <p>
-            Las propiedades personalizadas (a veces denominadas variables CSS o variables en cascada ) son entidades 
-            definidas por los autores de CSS que representan valores específicos que se reutilizarán en todo un documento
+        <p style="color: #0B3948;">
+            Las propiedades personalizadas (a veces denominadas variables CSS o variables en cascada) son entidades 
+            definidas por los autores de CSS que representan valores específicos que se reutilizarán en todo un documento.
         </p>
-        <p>
+        
+        <p style="color: #0B3948;">
             Los sitios web complejos tienen una gran cantidad de CSS, y esto suele dar como resultado una gran cantidad de 
             valores CSS repetidos. Por ejemplo, es común ver el mismo color usado en cientos de lugares diferentes en las 
             hojas de estilo. Cambiar un color que se ha duplicado en muchos lugares requiere una búsqueda y reemplazo en todas 
             las reglas y archivos CSS. Las propiedades personalizadas permiten definir un valor en un lugar y luego hacer 
             referencia a él en varios otros lugares para que sea más fácil trabajar con él. Otro beneficio es la legibilidad 
-            y la semántica. Por ejemplo, --main-text-colores más fácil de entender que el color hexadecimal #00ff00, 
+            y la semántica. Por ejemplo, --main-text-colores es más fácil de entender que el color hexadecimal #00ff00, 
             especialmente si el color se usa en diferentes contextos.
         </p>
-
-        <h2>Cómo crear y usar una variables en CSS</h2>
-
+        
+        <h2 class="mt-5 mb-3 fw-semibold" style="color: #ABA194;">Cómo crear y usar una variable en CSS</h2>
+        
         <div class="contain-code">
             <div class="code">
-<pre><code class="css">/* Creación de la variables*/
-    :root {
-        --main-text-colores: #00ff00;
-        --color-primari: #dd32da
-        --font-size-small: 16px;
-    }
-
-/* Utilizar una variable */
-    body {
-        background-color: var(--color-primari);
-    }
-</code></pre>
+                <pre><code class="css">/* Creación de las variables */
+            :root {
+                --main-text-colores: #00ff00;
+                --color-primario: #dd32da;
+                --font-size-small: 16px;
+            }
+        
+        /* Utilizar una variable */
+            body {
+                background-color: var(--color-primario);
+            }
+        </code></pre>
             </div>
         </div>
-
-        <p>
-            En la creación de una variable se  hace uso de la pseudoclase :root para declarar todas variables necesarias.
-            Mientras que para poder utilizar una como valor en un parámetro se debe usar la función var().
+        
+        <p style="color: #0B3948;">
+            En la creación de una variable se hace uso de la pseudoclase :root para declarar todas las variables necesarias.
+            Mientras que para poder utilizar una como valor en un parámetro se debe usar la función <code>var()</code>.
         </p>
+        
 
-        <br><br>
-            <a href="cascadingStyleSheet.html" class="back-menu">Volver al menu ☝️</a>
-            <br>
-    </main>
-    <script src="js/scrip.js"></script>
 </body>
 </html>

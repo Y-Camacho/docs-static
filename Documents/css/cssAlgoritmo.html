@@ -1,81 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/img/CSS-Logo.png" type="image/x-icon" >
-    <link rel="stylesheet" href="styles/style.css">
-    <title>Algoritmo CSS</title>
 </head>
 <body>
-    <main>
-        <h1>Algoritmo CSS</h1>
+    <h1 class="text-center fw-bold mb-4 display-4" style="color: #8C271E;">Algoritmo CSS</h1>
 
-        <p>
-            Es la forma en la que el navegarod aplicará los estilos 
-            al los elementod HTML. Es muy importante entenderlo para 
-            saber cómo se aplican y en algunos casos cómo se sobreescriben
-            las reglas CSS. Para enterder el algoritmo CSS es necesario
-            tener claro los siguientes conceptos:
-        </p>
-
-        <ul>
-            <li>La cacada</li>
-            <li>La especificidad</li>
-            <li>La herencia</li>
-        </ul>
-
-        <h2>La cascada</h2>
-
-        <p>
-            En un primer nivel de simplicidad, la cascada en las hojas de 
-            estilo significa que el orden de las reglas importa en CSS: 
-            cuando dos reglas tienen la misma especificidad, se aplica la 
-            que aparece en último lugar en el CSS. En teoría, los estilos 
-            CSS se van aplicando en el siguiente orden: 
-        </p>
-        <ol>
-            <li><b>User Agent:</b>
-                <p>Son los valores por defecto que el navegador asigna 
-                    a las propiedades de los elementos HTML.
-                </p>
-            </li>
-            <li><b>Personalización del usuario:</b>
-                <p>Son los temas y demás personalizaciones que un usuario 
-                    tenga en su navegador.
-                </p>
-            </li>
-            <li><b>Estilos de autor:</b>
-                <p>Son los estilos aplicados directamente en el HTML o 
-                    través de un archivo CSS.
-                </p>
-            </li>
-        </ol>
-
-        <h2>Especificidad</h2>
-
-        <p>Es la "prioridad" que un selector sobre otros a la hora de aplicar estilos.</p>
-        <p>
-            Por cada Etiqueta o pseudoelemento suma un 1 a 1r   dígito  0,0,0,1 <br>
-            Por cada Classe, atributo  o pseudoclasse, suma 1 al 2n dígito 0,0,1,0 <br>
-            Por cada Identificador suma 1 al 3r dígito 0,1,0,0 <br>
-            Por cada Estilo en línea suma 1 al 4t dígito 1,0,0,0 <br>
-            !important (Rompre la especificidad y se aplica).
-        </p>
-
-        <h2>Herencia</h2>
-
-        <p>
-            Si un elemento no tiene un valor en cascada para una determinada propiedad, 
-            puede heredar uno de un elemento antecesor. Es común aplicar la propiedad 
-            font-family al elemento &lt;body>. Todas las etiquetas descendientes de la 
-            etiqueta &lt;body>, es decir, las que están dentro de la etiqueta <body> heredarán 
-            esta fuente y no es necesario aplicarla explícitamente a cada elemento de la página.
-        </p>
-
-        <br><br>
-        <a href="cascadingStyleSheet.html" class="back-menu">Volver al menu ☝️</a>
-        <br>
-    </main>
+    <p class="lead">
+        Es la forma en la que el navegador aplicará los estilos 
+        a los elementos HTML. Es muy importante entenderlo para 
+        saber cómo se aplican y en algunos casos cómo se sobreescriben
+        las reglas CSS. Para entender el algoritmo CSS es necesario
+        tener claro los siguientes conceptos:
+    </p>
+    
+    <ul style="color: #0B3948;">
+        <li>La cascada</li>
+        <li>La especificidad</li>
+        <li>La herencia</li>
+    </ul>
+    
+    <h2 class="mt-5 mb-3 fw-semibold" style="color: #ABA194;">La cascada</h2>
+    
+    <p>
+        En un primer nivel de simplicidad, la cascada en las hojas de 
+        estilo significa que el orden de las reglas importa en CSS: 
+        cuando dos reglas tienen la misma especificidad, se aplica la 
+        que aparece en último lugar en el CSS. En teoría, los estilos 
+        CSS se van aplicando en el siguiente orden:
+    </p>
+    
+    <ol style="color: #0B3948;">
+        <li><b>User Agent:</b>
+            <p>Son los valores por defecto que el navegador asigna 
+                a las propiedades de los elementos HTML.
+            </p>
+        </li>
+        <li><b>Personalización del usuario:</b>
+            <p>Son los temas y demás personalizaciones que un usuario 
+                tenga en su navegador.
+            </p>
+        </li>
+        <li><b>Estilos de autor:</b>
+            <p>Son los estilos aplicados directamente en el HTML o 
+                a través de un archivo CSS.
+            </p>
+        </li>
+    </ol>
+    
+    <h2 class="mt-5 mb-3 fw-semibold" style="color: #ABA194;">Especificidad</h2>
+    
+    <p style="color: #0B3948;">Es la "prioridad" que un selector tiene sobre otros a la hora de aplicar estilos.</p>
+    <p style="color: #0B3948;">
+        Por cada etiqueta o pseudoelemento suma un 1 al primer dígito 0,0,0,1 <br>
+        Por cada clase, atributo o pseudoclase, suma 1 al segundo dígito 0,0,1,0 <br>
+        Por cada identificador suma 1 al tercer dígito 0,1,0,0 <br>
+        Por cada estilo en línea suma 1 al cuarto dígito 1,0,0,0 <br>
+        !important (rompe la especificidad y se aplica).
+    </p>
+    
+    <h2 class="mt-5 mb-3 fw-semibold" style="color: #ABA194;">Herencia</h2>
+    
+    <p style="color: #0B3948;">
+        Si un elemento no tiene un valor en cascada para una determinada propiedad, 
+        puede heredar uno de un elemento antecesor. Es común aplicar la propiedad 
+        font-family al elemento &lt;body&gt;. Todas las etiquetas descendientes de la 
+        etiqueta &lt;body&gt;, es decir, las que están dentro de la etiqueta <body>, heredarán 
+        esta fuente y no es necesario aplicarla explícitamente a cada elemento de la página.
+    </p>
+    
 </body>
 </html>

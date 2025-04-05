@@ -1,110 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/img/CSS-Logo.png" type="image/x-icon" >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-    <link rel="stylesheet" href="styles/style.css">
-    <title>Pseudoelementos</title>
 </head>
 <body>
-    <main>
-        <h1>Pseudo elementos</h1>
 
-        <p>
-            Nos permiten aplicar estilos a una arte específica de un elemento.
-            Para utilizarlos se usa dos dobles puntos (::). Los 
-            pseudoelementos aplican a cualquier elemento de bloque. 
-        </p>
+    <h1 class="text-center fw-bold mb-4 display-4" style="color: #8C271E;">Pseudo elementos</h1>
 
-        <h2>Ejemplo de aplicación</h2>
-
-        <div class="contain-code">
-            <div class="code">
-<pre><code>
-/* El sigiuente estilo hará que la primera letra del párrafo
-    sea más grande */
-    .p-speudoelement::first-letter {
-        font-size: 32px;
-    }
-</code></pre>
-            </div>
+    <p class="lead">
+        Nos permiten aplicar estilos a una parte específica de un elemento.
+        Para utilizarlos se usan dos dobles puntos (::). Los 
+        pseudoelementos aplican a cualquier elemento de bloque. 
+    </p>
+    
+    <h2 class="mt-5 mb-3 fw-semibold" style="color: #ABA194;">Ejemplo de aplicación</h2>
+    
+    <div class="contain-code">
+        <div class="code">
+            <pre><code>
+    /* El siguiente estilo hará que la primera letra del párrafo
+        sea más grande */
+        .p-speudoelement::first-letter {
+            font-size: 32px;
+        }
+    </code></pre>
         </div>
-
-        <h2>Clasificación de los pseudo elementos</h2>
-        <table>
-            <tr>
-                <th>TIPO</th>
-                <th>PSEUDOELEMENTO</th>
-                <th>DESCRIPCIÓN</th>
-            </tr>
-            <tr>
-                <td>Contenido generado</td>
-                <td>::before, ::after</td>
-                <td>Información generada desde CSS, sin existir en el HTML.</td>
-            </tr>
-            <tr>
-                <td>Contenido tipográfico</td>
-                <td>::first-line, ::first-letter</td>
-                <td>Pseudoelementos relacionados con temas de tipografías.</td>
-            </tr>
-            <tr>
-                <td>Contenido destacado</td>
-                <td>::selection, ::target-text, ::spelling-error, ::grammar-error</td>
-                <td>Pseudoelementos para remarcar o destacar información.</td>
-            </tr>
-            <tr>
-                <td>WebComponents</td>
-                <td>::part, ::slotted</td>
-                <td>Pseudoelementos relacionados con WebComponents</td>
-            </tr>
-            <tr>
-                <td>View Transition API</td>
-                <td>::view-transition, ::view-transition-group, ::view-transition-image-pair
-                    ::view-transition-new, ::view-transition-old</td>
-                <td>Pseudoelementos de transición de cambio de página</td>
-            </tr>
-            <tr>
-                <td>Otros pseudoelementos</td>
-                <td>::marker, ::placeholder, ::file-selector-button</td>
-                <td>Pseudoelementos de otras categorías variadas</td>
-            </tr>
-        </table>
-
-        <h3>Más pseudoelementos</h3>
-
-        <table class="table table-pseudoelementos">
-            <tr>
-                <th>PSEUDOELEMENTO</th>
-                <th>DESCRIPCIÓN</th>
-            </tr>
-            <tr>
-                <td>::marker</td>
-                <td>Aplica estilos a las marcas o símbolos de cada ítem de una lista.</td>
-            </tr>
-            <tr>
-                <td>::backdrop</td>
-                <td>Aplica estilos al fondo exterior de un elemento en primer plano (sin que afecte a este).</td>
-            </tr>
-            <tr>
-                <td>::placeholder</td>
-                <td>Aplica estilos a los textos de sugerencia de los campos &lt;input>.</td>
-            </tr>
-            <tr>
-                <td>::file-selector-button</td>
-                <td>Aplica estilos a los botones de campo &lt;input> de subir archivos.</td>
-            </tr>
-        </table>
-        <hr>
-
-        <p>Más información de los pseudoelemento <a href="https://lenguajecss.com/css/pseudoelementos/que-son/#:~:text=Los%20pseudoelementos%20son%20una%20caracter%C3%ADstica,un%20simple%20elemento%20en%20s%C3%AD." target="_blank">aquí</a></p>
-
-        <br><br>
-        <a href="cascadingStyleSheet.html" class="back-menu">Volver al menu ☝️</a>
-        <br>
-    </main>
-    <script src="js/scrip.js"></script>
+    </div>
+    
+    <h2 class="mt-5 mb-3 fw-semibold" style="color: #ABA194;">Clasificación de los pseudo elementos</h2>
+    
+    <table class="table">
+        <tr>
+            <th style="background-color: #CFCBCA; color: #0B3948;">TIPO</th>
+            <th style="background-color: #CFCBCA; color: #0B3948;">PSEUDOELEMENTO</th>
+            <th style="background-color: #CFCBCA; color: #0B3948;">DESCRIPCIÓN</th>
+        </tr>
+        <tr>
+            <td>Contenido generado</td>
+            <td>::before, ::after</td>
+            <td>Información generada desde CSS, sin existir en el HTML.</td>
+        </tr>
+        <tr>
+            <td>Contenido tipográfico</td>
+            <td>::first-line, ::first-letter</td>
+            <td>Pseudoelementos relacionados con temas de tipografías.</td>
+        </tr>
+        <tr>
+            <td>Contenido destacado</td>
+            <td>::selection, ::target-text, ::spelling-error, ::grammar-error</td>
+            <td>Pseudoelementos para remarcar o destacar información.</td>
+        </tr>
+        <tr>
+            <td>WebComponents</td>
+            <td>::part, ::slotted</td>
+            <td>Pseudoelementos relacionados con WebComponents</td>
+        </tr>
+        <tr>
+            <td>View Transition API</td>
+            <td>::view-transition, ::view-transition-group, ::view-transition-image-pair
+                ::view-transition-new, ::view-transition-old</td>
+            <td>Pseudoelementos de transición de cambio de página</td>
+        </tr>
+        <tr>
+            <td>Otros pseudoelementos</td>
+            <td>::marker, ::placeholder, ::file-selector-button</td>
+            <td>Pseudoelementos de otras categorías variadas</td>
+        </tr>
+    </table>
+    
+    <h3 style="color: #8C271E;">Más pseudoelementos</h3>
+    
+    <table class="table table-pseudoelementos">
+        <tr>
+            <th style="background-color: #CFCBCA; color: #0B3948;">PSEUDOELEMENTO</th>
+            <th style="background-color: #CFCBCA; color: #0B3948;">DESCRIPCIÓN</th>
+        </tr>
+        <tr>
+            <td>::marker</td>
+            <td>Aplica estilos a las marcas o símbolos de cada ítem de una lista.</td>
+        </tr>
+        <tr>
+            <td>::backdrop</td>
+            <td>Aplica estilos al fondo exterior de un elemento en primer plano (sin que afecte a este).</td>
+        </tr>
+        <tr>
+            <td>::placeholder</td>
+            <td>Aplica estilos a los textos de sugerencia de los campos &lt;input>.</td>
+        </tr>
+        <tr>
+            <td>::file-selector-button</td>
+            <td>Aplica estilos a los botones de campo &lt;input> de subir archivos.</td>
+        </tr>
+    </table>
+    <hr>
+    
+    <p>
+        Más información de los pseudoelementos <a href="https://lenguajecss.com/css/pseudoelementos/que-son/#:~:text=Los%20pseudoelementos%20son%20una%20caracter%C3%ADstica,un%20simple%20elemento%20en%20s%C3%AD." target="_blank" style="color: #8C271E;">aquí</a>
+    </p>
+    
 </body>
 </html>

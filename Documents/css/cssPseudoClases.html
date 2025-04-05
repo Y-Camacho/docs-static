@@ -1,102 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/img/CSS-Logo.png" type="image/x-icon" >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-    <link rel="stylesheet" href="styles/style.css">
-    <title>Pseudoclases</title>
 </head>
 <body>
-    <main>
-        <h1>Pseudoclases</h1>
+    <h1 class="text-center fw-bold mb-4 display-4" style="color: #8C271E;">Pseudoclases</h1>
 
-        <p>
-            Una pseudoclase CSS es una palabra clave que se añade a los 
-            selectores y que especifica un estado especial del elemento seleccionado.
-        </p>
-
-        <p>
-            Las pseudo clases aplicarán estilos dependiento
-            del contexto la posición o de ciertos estados que tenga
-            el elemento html en cuestión. Las pseudoclases comienzan
-            con dos puntos (:).
-        </p>
-
-        <h2>Ejemplo de aplicación</h2>
-        <div class="containcode">
-            <div class="code">
-<pre><code>
-/* El siguiene estilo aplica un color verde al fondo 
-del botón cuando el cursor está sobre él (:hover) */
-    .botton-aceptar:hover {
-        background-color: green;
-    }
-</code></pre>
-            </div>
+    <p class="lead">
+        Una pseudoclase CSS es una palabra clave que se añade a los 
+        selectores y que especifica un estado especial del elemento seleccionado.
+    </p>
+    
+    <p class="lead">
+        Las pseudo clases aplicarán estilos dependiendo del contexto, la posición o de ciertos estados que tenga
+        el elemento HTML en cuestión. Las pseudoclases comienzan con dos puntos (:).
+    </p>
+    
+    <h2 class="mt-5 mb-3 fw-semibold" style="color: #ABA194;">Ejemplo de aplicación</h2>
+    <div class="contain-code">
+        <div class="code">
+            <pre><code>
+    /* El siguiente estilo aplica un color verde al fondo 
+    del botón cuando el cursor está sobre él (:hover) */
+        .botton-aceptar:hover {
+            background-color: green;
+        }
+    </code></pre>
         </div>
-
-        <h2>Clasificación de las psudoclases</h2>
-        
-        <table class="table table-pseudoclases">
-            <tr>
-                <th>TIPO</th>
-                <th>PSEUDOCLASE</th>
-                <th>DESCRIPCIÓN</th>
-            </tr>
-            <tr>
-                <td>Interacción</td>
-                <td>:hover, :active, :focus, :focus-within, :focus-visible</td>
-                <td>	Pseudoclases relacionadas con acciones de usuario.</td>
-            </tr>
-            <tr>
-                <td>Ubicación</td>
-                <td>:any-link, :link, :visited, :target</td>
-                <td>Pseudoclases relacionadas con enlaces o ubicaciones.</td>
-            </tr>
-            <tr>
-                <td>Idioma</td>
-                <td>:lang(), :dir()</td>
-                <td>Pseudoclases relacionadas con idiomas.</td>
-            </tr>
-            <tr>
-                <td>Estructura</td>
-                <td>:root, :host, :defined, :empty
-                    :first-child, :last-child, :only-child
-                    :first-of-type, :last-of-type, :only-of-type
-                    :nth-child(), :nth-last-child(), :nth-of-type(), :nth-last-of-type()</td>
-                <td>Pseudoclases de estructura de documentos HTML</td>
-            </tr>
-            <tr>
-                <td>Formulario</td>
-                <td>:checked, :indeterminate
-                    :enabled, :disabled, :read-only, :read-write, :placeholder-shown, :default
-                    :required, :optional, :valid, :invalid, :user-valid, :user-invalid
-                    :in-range, :out-of-range</td>
-                <td>Pseudoclases de formularios HTML</td>
-            </tr>
-            <tr>
-                <td>Estado</td>
-                <td>:fullscreen, :modal</td>
-                <td>Pseudoclases relacionadas con el estado de modales o similares.</td>
-            </tr>
-            <tr>
-                <td>Paginado</td>
-                <td>:first, :left, :right, :blank</td>
-                <td>Pseudoclases de paginado de documentos HTML</td>
-            </tr>
-        </table>
-        <hr>
-        <p>
-            Más información de las pseudoclases <a href="https://lenguajecss.com/css/pseudoclases/que-son/" target="_blank">aquí.</a>
-        </p>
-
-        <br><br>
-        <a href="cascadingStyleSheet.html" class="back-menu">Volver al menu ☝️</a>
-        <br>
-    </main>
-    <script src="js/scrip.js"></script>
+    </div>
+    
+    <h2 class="mt-5 mb-3 fw-semibold" style="color: #ABA194;">Clasificación de las pseudoclases</h2>
+    
+    <table class="table table-pseudoclases">
+        <tr>
+            <th style="background-color: #CFCBCA; color: #0B3948;">TIPO</th>
+            <th style="background-color: #CFCBCA; color: #0B3948;">PSEUDOCLASE</th>
+            <th style="background-color: #CFCBCA; color: #0B3948;">DESCRIPCIÓN</th>
+        </tr>
+        <tr>
+            <td>Interacción</td>
+            <td>:hover, :active, :focus, :focus-within, :focus-visible</td>
+            <td>Pseudoclases relacionadas con acciones de usuario.</td>
+        </tr>
+        <tr>
+            <td>Ubicación</td>
+            <td>:any-link, :link, :visited, :target</td>
+            <td>Pseudoclases relacionadas con enlaces o ubicaciones.</td>
+        </tr>
+        <tr>
+            <td>Idioma</td>
+            <td>:lang(), :dir()</td>
+            <td>Pseudoclases relacionadas con idiomas.</td>
+        </tr>
+        <tr>
+            <td>Estructura</td>
+            <td>:root, :host, :defined, :empty
+                :first-child, :last-child, :only-child
+                :first-of-type, :last-of-type, :only-of-type
+                :nth-child(), :nth-last-child(), :nth-of-type(), :nth-last-of-type()</td>
+            <td>Pseudoclases de estructura de documentos HTML</td>
+        </tr>
+        <tr>
+            <td>Formulario</td>
+            <td>:checked, :indeterminate
+                :enabled, :disabled, :read-only, :read-write, :placeholder-shown, :default
+                :required, :optional, :valid, :invalid, :user-valid, :user-invalid
+                :in-range, :out-of-range</td>
+            <td>Pseudoclases de formularios HTML</td>
+        </tr>
+        <tr>
+            <td>Estado</td>
+            <td>:fullscreen, :modal</td>
+            <td>Pseudoclases relacionadas con el estado de modales o similares.</td>
+        </tr>
+        <tr>
+            <td>Paginado</td>
+            <td>:first, :left, :right, :blank</td>
+            <td>Pseudoclases de paginado de documentos HTML</td>
+        </tr>
+    </table>
+    <hr>
+    
+    <p>
+        Más información de las pseudoclases <a href="https://lenguajecss.com/css/pseudoclases/que-son/" target="_blank" style="color: #8C271E;">aquí.</a>
+    </p>
+    
 </body>
 </html>
