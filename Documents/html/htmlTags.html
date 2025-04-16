@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <h1>Etiquetas</h1>
+
+<p>
+    Son fragmentos de código que indican al navegador cómo mostrar el contenido de una página web. 
+    Son fundamentales para estructurar y dar sentido a la misma. Las etiquetas se caracterizan por 
+    estar entre los signos de mayor y menor que ( &lt; tag &gt;) y suelen venir acompañadas con su 
+    etiqueta de cierre respectiva ( &lt;/ tag &gt;). Aunque no todas tienen una.
+</p>
+
+<p>
+    Las etiquetas, en una página web, son representadas como cajas y el comportamiento de este ( en bloque 
+    o en línea ) determina la disposición de su contenido. Las <b>etiquetas en línea</b> son aquellas que 
+    permiten que la siguiente se ponga a su lado. Por otro lado, el <b>comportamiento en bloque</b> ocupa el ancho 
+    total disponible y obliga a las siguientes a ponerse por debajo.
+</p>
+
+<h3>Etiquetas en línea</h3>
+
+<p>
+    Un buen ejemplo de estas son todas las etiquetas de texto, que nos permiten tomar trozos de una frase, 
+    modificar su estilo, y continuar sin un salto de línea.
+</p>
+
+<p>
+    Esto es un ejemplo con texto en <code class="bg-light px-1 rounded">&lt; b &gt;</code><b>negrita</b> <code class="bg-light px-1 rounded">&lt;/ b &gt;</code>,
+    <code class="bg-light px-1 rounded">&lt; i &gt;</code><i>itálica</i> <code class="bg-light px-1 rounded">&lt;/ i &gt;</code> 
+    o de <code class="bg-light px-1 rounded">&lt; span &gt;</code><span>otro color</span><code class="bg-light px-1 rounded">&lt;/ span &gt;</code>. 
+</p>
+
+<h3>Etiquetas en bloque</h3>
+
+<p>
+    Son la mayoría de etiquetas, por lo que un buen ejemplo lo es un párrafo (<code class="bg-light px-1 rounded">&lt; p &gt;&lt;/ p &gt;</code>) 
+    o un div normal (<code class="bg-light px-1 rounded">&lt; div &gt;&lt;/ div &gt;</code>) , que vendría siendo la etiqueta más genérica (pero no menos útil) que hay.
+</p>
+
+<!-- 🔍 Ejemplo visual con CSS -->
+<h3 class="mt-5 mb-3" style="color: #8C271E;">Visualización: En línea vs. En bloque</h3>
+
+<p style="color: #0B3948;"><b>Etiquetas en línea:</b> (se colocan una al lado de otra)</p>
+<span class="inline-box">&lt;span&gt;</span>
+<span class="inline-box">&lt;strong&gt;</span>
+<span class="inline-box">&lt;a&gt;</span>
+
+<p class="mt-3" style="color: #0B3948;"><b>Etiquetas en bloque:</b> (cada una ocupa todo el ancho)</p>
+<div class="block-box">&lt;div&gt;</div>
+<div class="block-box">&lt;p&gt;</div>
+<div class="block-box">&lt;section&gt;</div>
+
+<h3>Etiquetas semánticas</h3>
+
+<p>
+    A partir de <b>HTML 5</b> llegaron las etiquetas semánticas. Estas no traen consigo ninguna funcionalidad especial. 
+    Pero de cara al código ayuda a identificar fácilmente las secciones de una página. Anteriormente se hacía uso 
+    del div <code class="bg-light px-1 rounded">&lt; div &gt;&lt;/ div &gt;</code> para estructurar todo dentro de 
+    de una web, lo que generaba que no se lograra diferenciar las partes que la componían.
+</p>
+
+<!-- 📊 Tabla comparativa -->
+<h3 class="mt-4 mb-3" style="color: #8C271E;">Comparación: Etiquetas semánticas vs. genéricas</h3>
+
+<section class="row">
+    <article class="col-5 row maqueta">
+        <header class="bg-info col-12"><code class="bg-light px-1 rounded">&lt; header &gt;&lt;/ header &gt;</code></header>
+        <aside class="h-50 bg-warning col-4"><code class="bg-light px-1 rounded">&lt; aside &gt; <br> &lt;/ aside &gt;</code></aside>
+        <main class="h-50 bg-danger col-8"><code class="bg-light px-1 rounded">&lt; main &gt;&lt;/ main &gt;</code></main>
+        <footer class="bg-success col-12"><code class="bg-light px-1 rounded">&lt; footer &gt;&lt;/ footer &gt;</code></footer>
+    </article>
+    <article class="col-1 bg-light"></article>
+    <article class="col-5 row maqueta">
+        <header class="bg-info col-12"><code class="bg-light px-1 rounded">&lt; div &gt;&lt;/ div &gt;</code></header>
+        <aside class="h-50 bg-warning col-4"><code class="bg-light px-1 rounded">&lt; div &gt;&lt;/ div &gt;</code></aside>
+        <main class="h-50 bg-danger col-8"><code class="bg-light px-1 rounded">&lt; div &gt;&lt;/ div &gt;</code></main>
+        <footer class="bg-success col-12"><code class="bg-light px-1 rounded">&lt; div &gt;&lt;/ div &gt;</code></footer>
+    </article>
+</section>
+<hr>
+
+</body>
+</html>

@@ -8,8 +8,14 @@ const loadContent = async (page) => {
     app.innerHTML = content;
 };
 
-const loadContent2 = async (page) => {
+const loadContentCss = async (page) => {
     const response = await fetch(`Documents/css/${page}.html`);
+    const content = await response.text();
+    app2.innerHTML = content;
+};
+
+const loadContentHtml = async (page) => {
+    const response = await fetch(`Documents/html/${page}.html`);
     const content = await response.text();
     app2.innerHTML = content;
 };
@@ -26,32 +32,50 @@ const router = () => {
             loadContent("staticCss");
             break;
         case "/css/how-to-use":
-            loadContent2("cssStilos");
+            loadContentCss("cssStilos");
             break;
         case "/css/selectors":
-            loadContent2("cssSelectores");
+            loadContentCss("cssSelectores");
             break;
         case "/css/pseudoclass":
-            loadContent2("cssPseudoClases");
+            loadContentCss("cssPseudoClases");
             break;
         case "/css/psudoelement":
-            loadContent2("cssPseudoElementos");
+            loadContentCss("cssPseudoElementos");
             break;
         case "/css/algoritme":
-            loadContent2("cssAlgoritmo");
+            loadContentCss("cssAlgoritmo");
             break;
         case "/css/variables":
-            loadContent2("cssVariables");
+            loadContentCss("cssVariables");
             break;
         case "/css/boxmodel":
-            loadContent2("cssBoxModel");
+            loadContentCss("cssBoxModel");
             break;
         case "/css/position":
-            loadContent2("cssPosicion");
+            loadContentCss("cssPosicion");
             break;
         // case "/contact":
         //     loadContent("");
         //     break;
+        case "/html":
+            loadContent("staticHtml");
+            break;
+        case "/html/tags":
+            loadContentHtml("htmlTags");
+            break;
+        case "/html/list":
+            loadContentHtml("htmlList");
+            break;
+        case "/html/forms":
+            loadContentHtml("htmlForms");
+            break;
+        case "/html/multimedia":
+            loadContentHtml("htmlMultimedia");
+        break;
+        case "/html/iframes":
+            loadContentHtml("htmlIframe");
+            break;
         default:
             app.innerHTML = "<h2>404 - Página no encontrada</h2>";
     }

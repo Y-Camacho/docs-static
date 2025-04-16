@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+</head>
+<body>
+    <h1 class="text-center fw-bold mb-4 display-4" style="color: #8C271E;">Contenido multimedia</h1>
+
+<p style="color: #0B3948;">
+    El concepto se aplica a objetos y sistemas que apelan a múltiples medios físicos y/o digitales 
+    para comunicar sus contenidos. El término también se usa en referencia a los medios en sí que 
+    permiten almacenar y difundir contenidos con estas características.
+</p>
+
+<p style="color: #0B3948;">
+    Las páginas web también pueden presentar desarrollos multimedia, con animaciones en HTML5, 
+    vídeos insertados, por ejemplo desde YouTube, música de fondo y material para leer. En estos 
+    casos, puede hablarse de <b>multimedia interactiva</b>, ya que es el usuario quien decide cómo será 
+    la presentación de la información y en qué momento iniciarla a través de sus clics.
+</p>
+
+<section class="container-fluid">
+    <h3 class="mt-4 mb-2" style="color: #8C271E;">Imágenes</h3>
+
+    <div class="row align-items-center mb-3">
+        <div class="col-6 bg-light d-flex justify-content-center align-items-center p-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 256 256">
+                <g fill="none">
+                    <rect width="256" height="256" fill="#e14e1d" rx="60"/>
+                    <path fill="#fff" d="m48 38l8.61 96.593h110.71l-3.715 41.43l-35.646 9.638l-35.579-9.624l-2.379-26.602H57.94l4.585 51.281l65.427 18.172l65.51-18.172l8.783-98.061H85.824l-2.923-32.71h122.238L208 38z"/>
+                    <path fill="#ebebeb" d="M128 38H48l8.61 96.593H128v-31.938H85.824l-2.923-32.71H128zm0 147.647l-.041.014l-35.579-9.624l-2.379-26.602H57.94l4.585 51.281l65.427 18.172l.049-.014z"/>
+                </g>
+            </svg>
+        </div>
+        <div class="col-6 bg-light p-3" style="color: #0B3948;">
+<pre style="background-color: #f8f9fa; border: 1px solid #ABA194; padding: 1rem; border-radius: 10px;">
+&lt;img src="img/html.svg" alt="Imagen html" /&gt;
+</pre>
+        </div>
+    </div>
+
+    <ul style="color: #0B3948;">
+        <li>El parámetro <code>src</code> recibe el path de la imagen.</li>
+        <li>El parámetro <code>alt</code> es un texto alternativo que se mostrará si la imagen no carga.</li>
+        <li>Se pueden usar formatos como <code>jpg</code>, <code>png</code>, <code>gif</code>, <code>webp</code>.</li>
+        <li>También se puede usar una URL externa como valor del <code>src</code>.</li>
+    </ul>
+
+    <h3 class="mt-4 mb-2" style="color: #8C271E;">Audio</h3>
+
+    <div class="row align-items-center mb-3">
+        <div class="col-6 bg-light d-flex justify-content-center align-items-center p-3">
+            <audio src="/Documents/html/mult/audio.mp3" controls style="width: 100%;"></audio>
+        </div>
+        <div class="col-6 bg-light p-3" style="color: #0B3948;">
+<pre style="background-color: #f8f9fa; border: 1px solid #ABA194; padding: 1rem; border-radius: 10px;">
+&lt;audio src="mult/audio.mp3" controls /&gt;
+</pre>
+        </div>
+    </div>
+
+    <ul style="color: #0B3948;">
+        <li>El atributo <code>src</code> recibe el path del audio.</li>
+        <li>Se deben habilitar manualmente los controles usando <code>controls</code>.</li>
+    </ul>
+
+    <h3 class="mt-4 mb-2" style="color: #8C271E;">Video</h3>
+
+    <div class="row align-items-center mb-3">
+        <div class="col-6 bg-light d-flex justify-content-center align-items-center p-3">
+            <video src="/Documents/html/mult/video.mp4" controls style="width: 100%; border-radius: 10px; border: 2px solid #ABA194;"></video>
+        </div>
+        <div class="col-6 bg-light p-3" style="color: #0B3948;">
+<pre style="background-color: #f8f9fa; border: 1px solid #ABA194; padding: 1rem; border-radius: 10px;">
+&lt;video src="mult/video.mp4" controls /&gt;
+</pre>
+        </div>
+    </div>
+
+    <ul style="color: #0B3948;">
+        <li>El atributo <code>src</code> indica la ruta del video.</li>
+        <li>Igual que con el audio, hay que especificar <code>controls</code>.</li>
+    </ul>
+</section>
+
+</body>
+</html>

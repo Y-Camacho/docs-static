@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+</head>
+<body>
+    <h1 style="color: #8C271E;">Formularios en HTML</h1>
+
+<p style="color: #2d2d2d;">
+    Los formularios en HTML nos permiten recoger información del usuario mediante campos interactivos. Son esenciales para funciones como registros, búsquedas o envíos de datos a un servidor.
+</p>
+
+<p style="color: #2d2d2d;">
+    La estructura básica de un formulario utiliza la etiqueta <code class="bg-light px-1 rounded" style="background-color: #D9F7FA; color: #8C271E;">&lt;form&gt;</code>, y dentro de esta podemos colocar diferentes tipos de elementos para entrada de datos.
+</p>
+
+<h3 style="color: #8C271E;">Ejemplo básico</h3>
+
+<div class="row">
+    <div class="col-6 bg-light ex ex-web" style="background-color: #D8DDDE;">
+        <form>
+            <label for="nombre" style="color: #8C271E;">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" style="background-color: #D9F7FA; border: none; padding: 4px;"><br><br>
+
+            <label for="correo" style="color: #8C271E;">Correo:</label><br>
+            <input type="email" id="correo" name="correo" style="background-color: #D9F7FA; border: none; padding: 4px;"><br><br>
+
+            <input type="submit" value="Enviar" style="background-color: #8C271E; color: white; padding: 6px 12px; border: none; border-radius: 4px;">
+        </form>
+    </div>
+    <div class="col-6 bg-light ex ex-html" style="background-color: #D8DDDE;">
+        <pre style="color: #2d2d2d;">
+&lt;form&gt;
+    &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+    &lt;input type="text" id="nombre" name="nombre"&gt;
+
+    &lt;label for="correo"&gt;Correo:&lt;/label&gt;
+    &lt;input type="email" id="correo" name="correo"&gt;
+
+    &lt;input type="submit" value="Enviar"&gt;
+&lt;/form&gt;
+</pre>
+    </div>
+</div>
+
+<h3 class="mt-4" style="color: #8C271E;">Tipos de campos de entrada (&lt;input&gt;)</h3>
+
+<p style="color: #2d2d2d;">Los formularios pueden incluir diferentes tipos de campos para recoger información específica:</p>
+
+<div class="row">
+    <div class="col-6 bg-light ex ex-web" style="background-color: #D8DDDE;">
+        <form>
+            <label style="color: #8C271E;">Texto:</label><br>
+            <input type="text" style="background-color: #D9F7FA; border: none; padding: 4px;"><br><br>
+
+            <label style="color: #8C271E;">Contraseña:</label><br>
+            <input type="password" style="background-color: #D9F7FA; border: none; padding: 4px;"><br><br>
+
+            <label style="color: #8C271E;">Correo electrónico:</label><br>
+            <input type="email" style="background-color: #D9F7FA; border: none; padding: 4px;"><br><br>
+
+            <label style="color: #8C271E;">Número:</label><br>
+            <input type="number" style="background-color: #D9F7FA; border: none; padding: 4px;"><br><br>
+
+            <label style="color: #8C271E;">Fecha:</label><br>
+            <input type="date" style="background-color: #D9F7FA; border: none; padding: 4px;"><br><br>
+
+            <label style="color: #8C271E;">Color:</label><br>
+            <input type="color" style="background-color: #D9F7FA; border: none; padding: 4px;"><br><br>
+
+            <label style="color: #8C271E;">Archivo:</label><br>
+            <input type="file" style="background-color: #D9F7FA; border: none; padding: 4px;"><br><br>
+
+            <label style="color: #8C271E;">Checkbox:</label>
+            <input type="checkbox" style="background-color: #D9F7FA; border: none;"> Acepto<br><br>
+
+            <label style="color: #8C271E;">Radio:</label><br>
+            <input type="radio" name="genero" style="background-color: #D9F7FA; border: none;"> Hombre<br>
+            <input type="radio" name="genero" style="background-color: #D9F7FA; border: none;"> Mujer<br><br>
+        </form>
+    </div>
+    <div class="col-6 bg-light ex ex-html" style="background-color: #D8DDDE;">
+        <pre style="color: #2d2d2d;">
+&lt;input type="text"&gt;
+&lt;input type="password"&gt;
+&lt;input type="email"&gt;
+&lt;input type="number"&gt;
+&lt;input type="date"&gt;
+&lt;input type="color"&gt;
+&lt;input type="file"&gt;
+&lt;input type="checkbox"&gt;
+&lt;input type="radio" name="genero"&gt;
+</pre>
+    </div>
+</div>
+
+<h3 class="mt-4" style="color: #8C271E;">Botones</h3>
+
+<p style="color: #2d2d2d;">Existen distintos tipos de botones para controlar el comportamiento del formulario:</p>
+
+<div class="row">
+    <div class="col-6 bg-light ex ex-web" style="background-color: #D8DDDE;">
+        <form>
+            <input type="submit" value="Enviar" style="background-color: #8C271E; color: white; padding: 6px 12px; border: none; border-radius: 4px;">
+            <input type="reset" value="Limpiar" style="background-color: #ABA194; color: white; padding: 6px 12px; border: none; border-radius: 4px;">
+            <button type="button" onclick="alert('¡Botón clicado!')" style="background-color: #CFCBCA; color: #8C271E; padding: 6px 12px; border: none; border-radius: 4px;">Personalizado</button>
+        </form>
+    </div>
+    <div class="col-6 bg-light ex ex-html" style="background-color: #D8DDDE;">
+        <pre style="color: #2d2d2d;">
+&lt;input type="submit" value="Enviar"&gt;
+&lt;input type="reset" value="Limpiar"&gt;
+&lt;button type="button"&gt;Personalizado&lt;/button&gt;
+</pre>
+    </div>
+</div>
+
+<p class="mt-4" style="color: #2d2d2d;">También se pueden incluir etiquetas como <code class="bg-light px-1 rounded" style="background-color: #D9F7FA; color: #8C271E;">&lt;select&gt;</code> para listas desplegables o <code class="bg-light px-1 rounded" style="background-color: #D9F7FA; color: #8C271E;">&lt;textarea&gt;</code> para textos largos.</p>
+
+<div class="row">
+    <div class="col-6 bg-light ex ex-web" style="background-color: #D8DDDE;">
+        <form>
+            <label style="color: #8C271E;">País:</label><br>
+            <select style="background-color: #D9F7FA; border: none; padding: 4px;">
+                <option>México</option>
+                <option>Colombia</option>
+                <option>Argentina</option>
+            </select><br><br>
+
+            <label style="color: #8C271E;">Mensaje:</label><br>
+            <textarea rows="3" cols="30" style="background-color: #D9F7FA; border: none;">Escribe aquí...</textarea>
+        </form>
+    </div>
+    <div class="col-6 bg-light ex ex-html" style="background-color: #D8DDDE;">
+        <pre style="color: #2d2d2d;">
+&lt;select&gt;
+    &lt;option&gt;México&lt;/option&gt;
+    &lt;option&gt;Colombia&lt;/option&gt;
+    &lt;option&gt;Argentina&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;textarea&gt;Escribe aquí...&lt;/textarea&gt;
+</pre>
+    </div>
+</div>
+
+
+</body>
+</html>

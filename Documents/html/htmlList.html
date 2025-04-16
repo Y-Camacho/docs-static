@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+</head>
+<body>
+    <h1 class="text-center fw-bold mb-4 display-4" style="color: #8C271E;">Listas</h1>
+
+<p style="color: #0B3948;">
+    Las listas en HTML nos permiten crear conjuntos de elementos en forma de lista dentro de una página web.
+</p>
+
+<section class="container-fluid">
+    <h3 class="mt-4 mb-2" style="color: #8C271E;">Listas desordenadas</h3>
+
+    <div class="row align-items-start mb-3">
+        <div class="col-6 bg-light p-3">
+            <ul>
+                <li>Arroz</li>
+                <li>Pasta</li>
+                <li>Manzanas</li>
+                <li>Sal</li>
+                <li>Pollo</li>
+            </ul>
+        </div>
+        <div class="col-6 bg-light p-3" style="color: #0B3948;">
+<pre style="background-color: #f8f9fa; border: 1px solid #ABA194; padding: 1rem; border-radius: 10px;">
+&lt;ul&gt;
+    &lt;li&gt;Arroz&lt;/li&gt;
+    &lt;li&gt;Pasta&lt;/li&gt;
+    &lt;li&gt;Manzanas&lt;/li&gt;
+    &lt;li&gt;Sal&lt;/li&gt;
+    &lt;li&gt;Pollo&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+        </div>
+    </div>
+
+    <p style="color: #0B3948;">Se puede cambiar el tipo de viñeta con el atributo <code>type</code>.</p>
+
+    <div class="row align-items-start mb-3">
+        <div class="col-6 bg-light p-3">
+            <ul type="square">
+                <li>Arroz</li>
+                <li>Pasta</li>
+            </ul>
+            <br>
+            <ul type="circle">
+                <li>Arroz</li>
+                <li>Pasta</li>
+            </ul>
+        </div>
+        <div class="col-6 bg-light p-3" style="color: #0B3948;">
+<pre style="background-color: #f8f9fa; border: 1px solid #ABA194; padding: 1rem; border-radius: 10px;">
+&lt;ul type="square"&gt;
+    &lt;li&gt;Arroz&lt;/li&gt;
+    &lt;li&gt;Pasta&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul type="circle"&gt;
+    &lt;li&gt;Arroz&lt;/li&gt;
+    &lt;li&gt;Pasta&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+        </div>
+    </div>
+
+    <h3 class="mt-4 mb-2" style="color: #8C271E;">Listas ordenadas</h3>
+
+    <div class="row align-items-start mb-3">
+        <div class="col-6 bg-light p-3">
+            <ol>
+                <li>Juan</li>
+                <li>Pepe</li>
+                <li>María</li>
+                <li>Julia</li>
+                <li>Pedro</li>
+            </ol>
+        </div>
+        <div class="col-6 bg-light p-3" style="color: #0B3948;">
+<pre style="background-color: #f8f9fa; border: 1px solid #ABA194; padding: 1rem; border-radius: 10px;">
+&lt;ol&gt;
+    &lt;li&gt;Juan&lt;/li&gt;
+    &lt;li&gt;Pepe&lt;/li&gt;
+    &lt;li&gt;María&lt;/li&gt;
+    &lt;li&gt;Julia&lt;/li&gt;
+    &lt;li&gt;Pedro&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+        </div>
+    </div>
+
+    <p style="color: #0B3948;">También se puede cambiar el tipo de numeración con el atributo <code>type</code>.</p>
+
+    <div class="row align-items-start mb-3">
+        <div class="col-6 bg-light p-3">
+            <ol type="I">
+                <li>Juan</li>
+                <li>Pepe</li>
+            </ol>
+            <br>
+            <ol type="a">
+                <li>Juan</li>
+                <li>Pepe</li>
+            </ol>
+        </div>
+        <div class="col-6 bg-light p-3" style="color: #0B3948;">
+<pre style="background-color: #f8f9fa; border: 1px solid #ABA194; padding: 1rem; border-radius: 10px;">
+&lt;ol type="I"&gt;
+    &lt;li&gt;Juan&lt;/li&gt;
+    &lt;li&gt;Pepe&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol type="a"&gt;
+    &lt;li&gt;Juan&lt;/li&gt;
+    &lt;li&gt;Pepe&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+        </div>
+    </div>
+
+    <p style="color: #0B3948;">También se puede revertir el orden o definir desde dónde empieza la lista.</p>
+
+    <div class="row align-items-start mb-5">
+        <div class="col-6 bg-light p-3">
+            <ol type="I" reversed>
+                <li>Juan</li>
+                <li>Pepe</li>
+            </ol>
+            <br>
+            <ol start="5">
+                <li>Juan</li>
+                <li>Pepe</li>
+            </ol>
+        </div>
+        <div class="col-6 bg-light p-3" style="color: #0B3948;">
+<pre style="background-color: #f8f9fa; border: 1px solid #ABA194; padding: 1rem; border-radius: 10px;">
+&lt;ol type="I" reversed&gt;
+    &lt;li&gt;Juan&lt;/li&gt;
+    &lt;li&gt;Pepe&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol start="5"&gt;
+    &lt;li&gt;Juan&lt;/li&gt;
+    &lt;li&gt;Pepe&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
